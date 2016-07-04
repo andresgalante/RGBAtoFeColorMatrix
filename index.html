@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RGBA to Color Matrix</title>
+  </head>
+  <body>
+    <h1 class="">RGBA to feColorMatrix</h1>
+    <form action="#">
+      <div>
+        <label for="rValue">R</label>
+        <input type="number" id="rValue" value="255" min="1" max="255" required>
+      </div>
+      <div>
+        <label for="gValue">G</label>
+        <input type="number" id="gValue" value="255" min="1" max="255" required>
+      </div>
+      <div>
+        <label for="bValue">B</label>
+        <input type="number" id="bValue" value="255" min="1" max="255" required>
+      </div>
+      <div>
+        <label for="aValue">A</label>
+        <input type="number" id="aValue" value="1" min="0" max="1" required>
+      </div>
+    </form>
+
+    <div class="colorMatrix">
+      <strong id="rMatrix">1</strong> 0 0 0 0<br>
+      0 <strong id="gMatrix">1</strong> 0 0 0<br>
+      0 0 <strong id="bMatrix">1</strong> 0 0<br>
+      0 0 0 <strong id="aMatrix">1</strong> 0
+    </div>
+
+    <svg width="200px" height="200px" viewBox="0 0 200 200">
+      <defs>
+        <filter id="colorChange">
+          <feColorMatrix
+            type = "matrix"
+            values="1     0     0     0     0
+                    0     1     0     0     0
+                    0     0     1     0     0
+                    0     0     0     1     0 "/>
+        </filter>
+      </defs>
+      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://avatars2.githubusercontent.com/u/1832037?v=3&s=460" width="200" height="200" x="0" y="0" filter = "url(#colorChange)"></image>
+    </svg>
+
+    <script src="script.js"></script>
+  </body>
+</html>
