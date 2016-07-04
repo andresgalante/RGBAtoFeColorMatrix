@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento:400,700);
+@import url(https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+
+$font-family-vast: 'Vast Shadow', cursive;
+$font-family-quattrocento: 'Quattrocento', serif;
+$font-family-stint: 'Stint Ultra Expanded', cursive;
+$font-family-sans: 'Open Sans', sans-serif;
+$font-family-mono: 'Inconsolata';
+$font-family-yeseva: 'Yeseva One', cursive;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$font-weight-x-bold: 700;
+$font-size-base: 14px;
+
+$color-red: #cc0000;
+$color-red-dark: #a30000;
+
+$color-green: #3f9c35;
+$color-green-dark: #2d7623;
+
+$color-blue: #0088ce;
+$color-blue-dark: #00659c;
+
+$color-grey: #8b8d8f;
+$color-grey-dark: #72767b;
+
+$color-white: #fafafa;
+$color-text: #292e34;
+
+
+body{
+  font-size: $font-size-base;
+  color: $color-text;
+}
+
+h1{
+  font-family: $font-family-stint;
+  font-size: $font-size-base * 2;
+  text-align: center;
+  color: $color-white;
+  text-shadow: 0px 1px 2px rgba(0,0,0,.8);
+}
+
+.container{
+//  background: tan;
+  margin: 0 auto;
+  max-width: 60em;
+}
+
+// FORM
+
+@mixin form-color($bg-color, $border-color) {
+  background: $bg-color;
+  input{border-bottom-color: $border-color;}
+  label{color: $border-color}
+}
+
+form{
+  display: flex;
+  color: $color-white;
+  div{
+    flex: 0 0 calc(25% - 40px);
+    padding: 20px;
+    transition: .2s all ease;
+    &:nth-of-type(1){ @include form-color($color-red, $color-red-dark);}
+    &:nth-of-type(2){ @include form-color($color-green, $color-green-dark);}
+    &:nth-of-type(3){ @include form-color($color-blue, $color-blue-dark);}
+    &:nth-of-type(4){ @include form-color($color-grey, $color-grey-dark);}
+    &:hover{
+      transform: scale3d(1.1, 1.1, 1);
+      box-shadow: 0 2px 5px rgba(0,0,0,.6);
+      z-index: 1;
+    }
+  }
+}
+
+label{
+  display: block;
+}
+
+input{
+  color: #fff;
+  width: 100%;
+  font-size: $font-size-base * 3;
+  text-shadow: 0px 1px 2px rgba(0,0,0,.8);
+  border: none;
+  padding: 0;
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0,0,0,.8);
+  background: transparent;
+}
+
+// PRE
+pre{
+  background: rgba(0,0,0,.8);
+  color: transparentize($color-white , .5);
+  white-space: pre-wrap;
+  padding: 20px;
+  font-family: $font-family-mono;
+  font-weight: $font-weight-normal;
+  strong{
+    font-weight: $font-weight-x-bold;
+    color: $color-white;
+  }
+}
+
+// IMG
+svg{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1;
+  background: red;
+}
