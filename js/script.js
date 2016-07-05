@@ -44,6 +44,9 @@ window.onchange = function changeValue(){
   console.log(rgba);
   console.log(matrix);
   feColorMatrix.setAttribute('values', matrix);
+
+  document.getElementById('selectedColor').style.backgroundColor = 'rgba(' + document.getElementById('rValue').value + ',' + document.getElementById('gValue').value + ',' + document.getElementById('bValue').value + ',' + document.getElementById('aValue').value + ')';
+
 }
 
 // TODO: Create a js library.
