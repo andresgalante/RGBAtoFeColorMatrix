@@ -3,14 +3,22 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 body {
   font-size: 14px;
-  color: #292e34; }
+  color: #fafafa;
+  padding-top: 5px; }
 
 h1 {
   font-family: "Stint Ultra Expanded", cursive;
-  font-size: 28px;
+  font-size: 33.6px;
   text-align: center;
-  color: #fafafa;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px; }
+  h1 span {
+    font-size: .8em; }
+
+p {
+  line-height: 1.3em;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+  text-align: center; }
 
 .container {
   margin: 0 auto;
@@ -19,8 +27,7 @@ h1 {
 form {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  color: #fafafa; }
+  display: flex; }
   form div {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(25% - 40px);
@@ -53,8 +60,8 @@ form {
       form div:nth-of-type(4) label {
         color: rgba(0, 0, 0, 0.35); }
     form div:hover {
-      -webkit-transform: scale3d(1.1, 1.1, 1);
-              transform: scale3d(1.1, 1.1, 1);
+      -webkit-transform: scale3d(1.2, 1.2, 1);
+              transform: scale3d(1.2, 1.2, 1);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
       z-index: 1; }
 
@@ -88,11 +95,11 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   background: #999; }
 
 #selectedColor {
-  background: rgba(0, 0, 0, 0.4);
+  background: #fff;
   position: absolute;
   width: 100%;
   top: 0;
