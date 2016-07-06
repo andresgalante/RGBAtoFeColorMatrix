@@ -41,6 +41,11 @@ h1{
     font-size: .8em;
   }
 }
+h2{
+  font-size: $font-size-base * 3;
+  text-align: center;
+  text-shadow: 0px 2px 4px rgba(0,0,0,.8);
+}
 
 p{
   line-height: $line-height;

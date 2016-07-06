@@ -48,12 +48,12 @@ var feColorMatrix = document.querySelector('feColorMatrix');
 window.onchange = function changeValue(){
   var rgba = rgbValues();
   var matrix = buildMatrix(rgba);
-//  console.log(rgba);
-//  console.log(matrix);
+  console.log(rgba);
+  console.log(matrix);
   feColorMatrix.setAttribute('values', matrix);
   document.getElementById('selectedColor').style.backgroundColor = 'rgba(' + document.getElementById('rValue').value + ',' + document.getElementById('gValue').value + ',' + document.getElementById('bValue').value + ',' + document.getElementById('aValue').value + ')';
 }
 
 // TODO: Create a js library.
 
-document.getElementsByTagName("feColorMatrix")[0].getAttribute("type");
+// document.getElementsByTagName("feColorMatrix")[0].getAttribute("type");
