@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>RGBA to Color Matrix</title>
+    <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" href="css/base.css">
   </head>
@@ -11,7 +12,10 @@
 
     <h1>RGBA <span>to</span> feColorMatrix</h1>
     <p>
-      Description of the project and link to github repo.
+      This converter was inpsired by <a href="http://alistapart.com/article/finessing-fecolormatrix">this article</a> written by <a href="https://una.im/">Una Kravets</a> and built with <strong>a lot</strong> of help from <a href="https://github.com/bleathem">Brian Leathem</a>.
+    </p>
+    <p>
+      <i class="fa fa-github" aria-hidden="true"></i>
     </p>
 
     <form action="#">
@@ -52,24 +56,26 @@
 </pre>
 
 
-    <svg width="100%" height="100%"  viewBox="0 0 200 100" preserveAspectRatio = "xMinYMin slice">
-      <defs>
-        <filter id="colorChange">
-          <feColorMatrix
-            type = "matrix"
-            values="1     0     0     0     0
-                    0     1     0     0     0
-                    0     0     1     0     0
-                    0     0     0     1     0 "/>
-        </filter>
-      </defs>
-      <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/bg_01.jpg" width="100%" height="100%" x="0" y="0" filter="url(#colorChange)" ></image>
-    </svg>
+      <svg width="100%" height="100%"  viewBox="0 0 200 100" preserveAspectRatio = "xMinYMin slice">
+        <defs>
+          <filter id="colorChange">
+            <feColorMatrix
+              type = "matrix"
+              rgbaToFeColorMatrix = "255, 0, 0, 1"
+              values="1     0     0     0     0
+                      0     1     0     0     0
+                      0     0     1     0     0
+                      0     0     0     1     0 "/>
+          </filter>
+        </defs>
+        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/bg_01.jpg" width="100%" height="100%" x="0" y="0" filter="url(#colorChange)" id="randomImage"></image>
+      </svg>
 
-  </div><!-- /conatiner -->
+    </div><!-- /conatiner -->
 
+    <!-- JavaScript -->
     <script type="text/javascript" src="js/script.js"></script>
-    </script>
+    <script src="https://use.fontawesome.com/f190e89842.js"></script>
 
   </body>
 </html>
