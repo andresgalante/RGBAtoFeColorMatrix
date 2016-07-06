@@ -26,5 +26,7 @@ gulp
 
 Enjoy!
 
+## Thanks!
+Thanks to [Brian Leathem](https://github.com/bleathem), [Patrick Riley](https://github.com/priley86) and the [Red Hat UXD team](https://twitter.com/RedHatUXD) for the [breakaway sprint](https://www.youtube.com/watch?v=kHue-HaXXzg) :smile:
 ## Next steps
-I want to create a library out of this project.
+I want to create a library out of this.
