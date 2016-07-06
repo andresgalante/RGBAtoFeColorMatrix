@@ -55,3 +55,5 @@ window.onchange = function changeValue(){
 }
 
 // TODO: Create a js library.
+
+document.getElementsByTagName("feColorMatrix")[0].getAttribute("type");
