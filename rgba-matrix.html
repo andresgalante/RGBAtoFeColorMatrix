@@ -1,0 +1,105 @@
+<link rel="import" href="node_modules/polymer/polymer.html">
+
+<dom-module id="rgba-matrix">
+
+    <template>
+        <style>
+            /* local styles go here */
+            :host {
+
+            }
+        </style>
+
+        <!-- local DOM goes here -->
+        <svg width="100%" height="100%"  viewBox="0 0 200 100" preserveAspectRatio = "xMinYMin slice">
+            <defs>
+                <filter id="colorChange">
+                    <feColorMatrix
+                            type = "matrix"
+                            rgbaToFeColorMatrix = "255, 0, 0, 1"
+                            values="1     0     0     0     0
+                      0     1     0     0     0
+                      0     0     1     0     0
+                      0     0     0     1     0 "/>
+                </filter>
+            </defs>
+            <image id="randomImage"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/bg_01.jpg"
+                   width="100%" height="100%" x="0" y="0"
+                   filter="url(#colorChange)">
+            </image>
+        </svg>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'rgba-matrix',
+
+            ready: function(){
+                //setup
+            },
+
+            //instance methods
+            buildMatrix: function(){
+                return `${this.r} 0 0 0 0 `
+                        + `0 ${this.g} 0 0 0 `
+                        + `0 0 ${this.b} 0 0 `
+                        + `0 0 0 ${this.a} 0 `;
+            },
+
+            setMatrix: function(r,g,b,a){
+                this.r = this.parseValue(r);
+                this.g = this.parseValue(g);
+                this.b = this.parseValue(b);
+                this.a = a;
+
+                this.refresh();
+            },
+
+            parseValue: function(val){
+              return Math.round((val / 255) * 100) / 100;
+
+            },
+
+            refresh: function(){
+                var matrix = this.buildMatrix();
+
+                // Refresh the image with the new Matrix
+                this.$.colorChange.querySelector('feColorMatrix').setAttribute('values', matrix);
+            },
+
+            //public properties
+            properties: {
+                r: {
+                    type: Number,
+                    value: 1,
+                    reflectToAttribute: true
+                },
+                g: {
+                    type: Number,
+                    value: 1,
+                    reflectToAttribute: true
+                },
+                b: {
+                    type: Number,
+                    value: 1,
+                    reflectToAttribute: true
+                },
+                a: {
+                    type: Number,
+                    value: 1,
+                    reflectToAttribute: true
+                }
+            },
+
+            //observers
+            observers : [
+                'propsChanged(r,g,b,a)'
+            ],
+
+            propsChanged(){
+                this.refresh();
+            }
+        });
+    </script>
+</dom-module>
