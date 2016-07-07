@@ -109,7 +109,6 @@ input{
 // PRE
 pre{
   padding: 20px;
-  font-family: $font-family-roboto-mono;
   font-weight: $font-weight-light;
   color: transparentize($color-white , .5);
   background: rgba(0,0,0,.8);
@@ -118,6 +117,7 @@ pre{
     font-weight: $font-weight-bold;
     color: $color-white;
   }
+  code{font-family: $font-family-roboto-mono;}
   span{
     font-size: $font-size-base * 1.45;
   }
