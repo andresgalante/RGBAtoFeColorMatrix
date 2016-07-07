@@ -6,6 +6,9 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" href="css/base.css">
+
+    <script src="node_modules/webcomponentsjs/lite.js"></script>
+    <link rel="import" href="rgba-matrix.html">
   </head>
   <body>
     <div class="container">
@@ -56,19 +59,8 @@
   <a href="https://github.com/andresgalante/RGBAtoFeColorMatrix"><i class="fa fa-github" aria-hidden="true"></i></a>
 </h2>
 
-      <svg width="100%" height="100%"  viewBox="0 0 200 100" preserveAspectRatio = "xMinYMin slice">
-        <defs>
-          <filter id="colorChange">
-            <feColorMatrix
-              type = "matrix"
-              values="1     0     0     0     0
-                      0     1     0     0     0
-                      0     0     1     0     0
-                      0     0     0     1     0 "/>
-          </filter>
-        </defs>
-        <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/bg_01.jpg" width="100%" height="100%" x="0" y="0" filter="url(#colorChange)" id="randomImage"></image>
-      </svg>
+      <!-- custom element -->
+      <rgba-matrix r="1" g="1" b="1" a="1"></rgba-matrix>
 
     </div><!-- /conatiner -->
 
