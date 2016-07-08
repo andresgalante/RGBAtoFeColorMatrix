@@ -21,7 +21,3 @@ function setValues(rgbaMatrix) {
   document.getElementById("bMatrix").innerHTML = rgbaMatrix.b;
   document.getElementById("aMatrix").innerHTML = rgbaMatrix.a;
 }
-
-// TODO: Create a js library.
-
-// document.getElementsByTagName("feColorMatrix")[0].getAttribute("type");
