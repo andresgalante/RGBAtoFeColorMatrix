@@ -40,17 +40,17 @@ Will result in:
 
 You’ll need npm to install the dev dependencies. First make sure you have [node installed](https://nodejs.org/en/) on your system.
 
-1. To install the dependencies run:
+1) To install the dependencies run:
 ```
 npm install
 ```
 
-2. To start a server and sass compiler, run:
+2) To start a server and sass compiler, run:
 ```
 gulp
 ```
 
-3. Open [http://localhost:3000/](http://localhost:3000/)
+3) Open [http://localhost:3000/](http://localhost:3000/)
 
 Enjoy!
 
