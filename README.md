@@ -56,7 +56,3 @@ Enjoy!
 
 ## [Appreciation](https://www.youtube.com/watch?v=Jo-0ytcEXKg)
 Thanks to [Brian Leathem](https://github.com/bleathem), [Patrick Riley](https://github.com/priley86) and the [Red Hat UXD team](https://twitter.com/RedHatUXD) for the [breakaway sprint](https://www.youtube.com/watch?v=kHue-HaXXzg) :smile:
-
-## Next steps
-
-I want to use service worker to load my dependencies.
