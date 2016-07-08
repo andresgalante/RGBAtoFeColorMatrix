@@ -1,4 +1,4 @@
-# [RGBA to feColorMatrix converter](https://blog.andresgalante.com/RGBAtoFeColorMatrix)
+# [RGBA to feColorMatrix converter](http://blog.andresgalante.com/RGBAtoFeColorMatrix)
 
 [feColorMatrix](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feColorMatrix) is an SVG filter that changes colors based on a transformation matrix. Every pixel's color value (represented by an [R,G,B,A] vector) is matrix multiplied to create a new color.
 
