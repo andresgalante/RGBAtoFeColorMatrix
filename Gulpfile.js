@@ -12,6 +12,15 @@ gulp.task('styles', function() {
         .pipe(reload({stream:true}));
 });
 
+gulp.task('copy', function() {
+    gulp.src(['node_modules/webcomponentsjs/lite.js',
+        'node_modules/polymer/polymer.html',
+        'node_modules/polymer/polymer-mini.html',
+        'node_modules/polymer/polymer-micro.html'
+        ]
+    ).pipe(gulp.dest('./dist'));
+});
+
 // reload server
 gulp.task('browser-sync', function() {
     browserSync({
@@ -33,4 +42,4 @@ gulp.task('watch',function() {
 });
 
 // deploys
-gulp.task('default',  ['styles','browser-sync','watch']);
+gulp.task('default',  ['styles','copy','browser-sync','watch']);
